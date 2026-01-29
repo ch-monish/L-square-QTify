@@ -1,0 +1,103 @@
+.songsSection {
+  width: 100%;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  background-color: var(--theme-bg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--theme-white);
+  font-family: "Poppins", sans-serif;
+}
+
+.loading {
+  color: var(--theme-white);
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.error {
+  color: var(--theme-error);
+  font-weight: 600;
+  margin: 16px 0;
+  padding: 16px;
+  background: rgba(255, 77, 79, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--theme-error);
+}
+
+.tabsContainer {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabs {
+  width: 100%;
+  min-height: 48px;
+}
+
+.tabs :global(.MuiTabs-flexContainer) {
+  gap: 8px;
+}
+
+.tab {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+  padding: 8px 16px !important;
+  min-width: auto !important;
+  min-height: 40px !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.tab:hover {
+  background-color: rgba(52, 201, 75, 0.1) !important;
+}
+
+.activeTab {
+  color: var(--theme-white) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+  padding: 8px 16px !important;
+  min-width: auto !important;
+  min-height: 40px !important;
+  border-radius: 16px !important;
+  background-color: rgba(52, 201, 75, 0.15) !important;
+}
+
+.tabIndicator {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .songsSection {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .tab,
+  .activeTab {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+}

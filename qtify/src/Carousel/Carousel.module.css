@@ -1,0 +1,64 @@
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--theme-bg);
+}
+
+.carousel {
+  width: 100%;
+  padding: 8px 0;
+  flex: 1;
+  background-color: var(--theme-bg);
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.navButton:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.navButton:active {
+  transform: scale(0.95);
+}
+
+.prevButton {
+  order: -1;
+}
+
+.nextButton {
+  order: 1;
+}
+
+/* Swiper styles */
+.carousel :global(.swiper) {
+  background-color: var(--theme-bg);
+}
+
+.carousel :global(.swiper-wrapper) {
+  align-items: stretch;
+  background-color: var(--theme-bg);
+}
+
+.carousel :global(.swiper-slide) {
+  display: flex;
+  align-items: stretch;
+  background-color: var(--theme-bg);
+}

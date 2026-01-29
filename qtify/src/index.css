@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-html {
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #000000;
 }
 
 :root {
@@ -12,19 +13,21 @@ html {
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* QTify Color Variables */
-  --color-black: #121212;
-  --color-primary: #34c94b;
-  --color-white: #ffffff;
+  /* QTify Color Variables - These will be overridden by MUI Theme */
+  --theme-bg: #000000;
+  --theme-primary: #34c94b;
+  --theme-secondary: #181818;
+  --theme-white: #ffffff;
+  --theme-error: #ff4d4f;
 }
 
 a {

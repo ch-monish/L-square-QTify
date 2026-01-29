@@ -1,5 +1,5 @@
 .card {
-  background-color: var(--color-black);
+  background-color: var(--theme-black);
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
@@ -32,8 +32,8 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: var(--color-black) !important;
-  color: var(--color-white) !important;
+  background-color: var(--theme-black) !important;
+  color: var(--theme-white) !important;
 }
 
 .content {
@@ -48,7 +48,7 @@
   margin: 0;
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--theme-white);
   line-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;

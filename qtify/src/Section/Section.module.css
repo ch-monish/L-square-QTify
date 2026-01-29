@@ -1,14 +1,15 @@
 .section {
   width: 100%;
-  padding: 30px 32px;
+  padding: 40px 32px;
   box-sizing: border-box;
+  background-color: var(--theme-bg);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   gap: 20px;
 }
 
@@ -16,15 +17,18 @@
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--theme-white);
+  font-family: "Poppins", sans-serif;
 }
 
 .toggleButton {
-  background-color: transparent;
-  color: var(--color-primary);
+  background-color: var(--theme-primary);
+  color: var(--theme-secondary);
   border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
@@ -32,34 +36,102 @@
 }
 
 .toggleButton:hover {
+  background-color: #2fa43f;
   transform: scale(1.05);
 }
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
   width: 100%;
+}
+
+.loading {
+  color: var(--theme-white);
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.error {
+  color: var(--theme-error);
+  font-weight: 600;
+  margin: 16px 0;
+  padding: 16px;
+  background: rgba(255, 77, 79, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--theme-error);
+}
+
+.tabsContainer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tabs {
+  display: flex !important;
+  gap: 16px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  flex-wrap: nowrap;
+}
+
+.tab {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: "Poppins", sans-serif !important;
+  text-transform: capitalize !important;
+  padding: 12px 16px !important;
+  min-width: auto !important;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent !important;
+}
+
+.tab:hover {
+  color: var(--theme-white) !important;
+}
+
+.activeTab {
+  color: var(--theme-white) !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid var(--theme-primary) !important;
+}
+
+.tabIndicator {
+  background-color: var(--theme-primary) !important;
+  height: 2px !important;
 }
 
 @media (max-width: 1024px) {
   .cardGrid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .section {
+    padding: 30px 24px;
   }
 }
 
 @media (max-width: 768px) {
   .cardGrid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 16px;
   }
 
   .section {
-    padding: 20px 16px;
+    padding: 24px 16px;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 22px;
+  }
+  
+  .toggleButton {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }

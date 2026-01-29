@@ -1,7 +1,7 @@
 .button {
-  background-color: var(--color-black);
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  background-color: var(--theme-black);
+  color: var(--theme-primary);
+  border: 1px solid var(--theme-primary);
   padding: 8px 24px;
   border-radius: 24px;
   font-family: "Poppins", sans-serif;
@@ -12,7 +12,7 @@
 }
 
 .button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-black);
+  background-color: var(--theme-primary);
+  color: var(--theme-black);
   cursor: pointer;
 }

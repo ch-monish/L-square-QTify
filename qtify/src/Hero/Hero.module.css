@@ -1,5 +1,5 @@
 .hero {
-  background-color: var(--color-black);
+  background-color: var(--theme-bg);
   min-height: 270px;
   width: 100%;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .hero h1 {
-  color: var(--color-white);
+  color: var(--theme-white);
   font-size: clamp(24px, 5vw, 48px);
   font-weight: 700;
   margin: 0;
