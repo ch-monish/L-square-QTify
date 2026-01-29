@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Testing
+cypress/
+cypress.config.js
+cypress.config.json
+.env.test
+coverage/
+
