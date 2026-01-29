@@ -82,8 +82,8 @@ function Section({ title, data, fetchUrl, CardComponent, showToggle = true }) {
   // Show 7 cards if collapsed, all if expanded
   const cardsToDisplay = isCollapsed ? filteredItems.slice(0, 7) : filteredItems;
   const shouldShowToggle = showToggle && filteredItems.length > 7;
-  const buttonText = isCollapsed ? "Collapse" : "Show All";
-//   const buttonText = isCollapsed ?"Show All"  :  "Collapse";
+//   const buttonText = isCollapsed ? "Collapse" : "Show All";
+  const buttonText = isCollapsed ?"Show All"  :  "Collapse";
 
   return (
     <section className={styles.section}>
@@ -127,7 +127,15 @@ function Section({ title, data, fetchUrl, CardComponent, showToggle = true }) {
           )}
           {showToggle ? (
             isCollapsed ? (
-              <div className={styles.cardGrid}>
+
+
+                   <Carousel items={filteredItems} CardComponent={CardComponent || Card} />
+
+            
+            ) : (
+             
+              // When expanded, show a reusable Carousel instead of the grid
+                <div className={styles.cardGrid}>
                 {cardsToDisplay.map((album) => (
                   <Card
                     key={album.id}
@@ -137,9 +145,6 @@ function Section({ title, data, fetchUrl, CardComponent, showToggle = true }) {
                   />
                 ))}
               </div>
-            ) : (
-              // When expanded, show a reusable Carousel instead of the grid
-              <Carousel items={filteredItems} CardComponent={CardComponent || Card} />
             )
           ) : (
             // For sections like Songs: always show carousel, no toggle
