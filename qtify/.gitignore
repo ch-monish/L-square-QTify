@@ -29,4 +29,6 @@ cypress.config.js
 cypress.config.json
 .env.test
 coverage/
+TEST_REQUIREMENTS.md
+
 
