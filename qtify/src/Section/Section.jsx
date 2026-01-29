@@ -12,7 +12,7 @@ function Section({ title, data, fetchUrl, CardComponent, showToggle = true }) {
   const [albums, setAlbums] = useState(data || []);
   const [loading, setLoading] = useState(!data);
   const [error, setError] = useState(null);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("all");
 
