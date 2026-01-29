@@ -10,12 +10,14 @@ function Section({ title, data }) {
     <div className={styles.section}>
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
-        <button
-          className={styles.toggleButton}
-          onClick={() => setIsCollapsed(!isCollapsed)}
-        >
-          {isCollapsed ? "Show All" : "Collapse"}
-        </button>
+        {data && data.length > 7 && (
+          <button
+            className={styles.toggleButton}
+            onClick={() => setIsCollapsed(!isCollapsed)}
+          >
+            {isCollapsed ? "Show All" : "Collapse"}
+          </button>
+        )}
       </div>
       <div className={styles.cardGrid}>
         {cardsToDisplay.map((album) => (
